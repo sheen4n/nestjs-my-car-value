@@ -5,7 +5,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "asdf2@asdd.com",
+  "email": "asdf5@asdd.com",
   "password": "123456"
 }
 
@@ -15,7 +15,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "email": "asdf3@asdd.com",
+  "email": "asdf5@asdd.com",
   "password": "123456"
 }
 
@@ -45,3 +45,13 @@ content-type: application/json
   "email": "aaa@aaa.com",
   "password": "123456"
 }
+
+### WHO AM I
+
+GET http://localhost:3000/auth/whoami
+content-type: application/json
+
+### SIGN OUT
+
+POST http://localhost:3000/auth/signout
+content-type: application/json
