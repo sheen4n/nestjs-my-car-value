@@ -21,7 +21,7 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Report, (report: Report): User => report.user)
+  @OneToMany((): typeof Report => Report, (report: Report): User => report.user)
   reports: Report[];
 
   @AfterInsert()

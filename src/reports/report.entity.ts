@@ -24,6 +24,6 @@ export class Report {
   @Column()
   mileage: number;
 
-  @ManyToOne(() => User, (user: User): Report[] => user.reports)
+  @ManyToOne((): typeof User => User, (user: User): Report[] => user.reports)
   user: User;
 }
