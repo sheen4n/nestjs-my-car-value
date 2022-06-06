@@ -29,9 +29,7 @@ switch (process.env.NODE_ENV) {
       url: process.env.DATABASE_URL, // from heroku
       migrationsRun: true,
       entities: ['**/*.entity.js'],
-      ssl: {
-        rejectUnathorized: false,
-      }
+      ssl: {rejectUnauthorized: false}
     })
     break
   default:
