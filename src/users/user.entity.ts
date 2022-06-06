@@ -21,6 +21,9 @@ export class User {
   @Column()
   password: string;
 
+  @Column({default: true})
+  admin: boolean;
+
   @OneToMany((): typeof Report => Report, (report: Report): User => report.user)
   reports: Report[];
 
