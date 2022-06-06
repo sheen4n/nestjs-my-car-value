@@ -5,7 +5,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "abcd@abc.com",
+  "email": "abcde@abc.com",
   "password": "123456"
 }
 
@@ -15,25 +15,25 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "email": "abcd@abc.com",
+  "email": "abcde@abc.com",
   "password": "123456"
 }
 
 ### Find a particular user of id 1
 
-GET http://localhost:3000/auth/5
+GET http://localhost:3000/auth/3
 content-type: application/json
 
 
 ### Find a particular user of emails
 
-GET http://localhost:3000/auth?email=aaa@aaa.com
+GET http://localhost:3000/auth?email=abc@abc.com
 content-type: application/json
 
 
 ### Remove a particular user of id 1
 
-DELETE http://localhost:3000/auth/3
+DELETE http://localhost:3000/auth/1
 content-type: application/json
 
 ### Update user
