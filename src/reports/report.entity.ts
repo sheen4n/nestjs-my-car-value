@@ -18,7 +18,7 @@ export class Report {
   lng: number;
 
   @Column()
-  lag: number;
+  lat: number;
 
   @Column()
   mileage: number;
