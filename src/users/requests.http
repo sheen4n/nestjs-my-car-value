@@ -21,7 +21,7 @@ content-type: application/json
 
 ### Find a particular user of id 1
 
-GET http://localhost:3000/auth/3
+GET http://localhost:3000/auth/1
 content-type: application/json
 
 
