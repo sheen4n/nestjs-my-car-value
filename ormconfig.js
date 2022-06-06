@@ -1,14 +1,26 @@
 var dbConfig = {
-  synchronise: false
+  synchronise: false,
+  migrations: ['migrations/*.js'],
+  cli: {
+    migrationsDir: 'migrations'
+  }
 }
 
 
 switch (process.env.NODE_ENV) {
   case 'development':
-    Object.assign(dbConfig, {type: 'sqlite', database: 'db.sqlite', entities: ['**/*.entity.js']})
+    Object.assign(dbConfig, {
+      type: 'sqlite',
+      database: 'db.sqlite',
+      entities: ['**/*.entity.js']
+    })
     break
   case 'test':
-    Object.assign(dbConfig, {type: 'sqlite', database: 'test.sqlite', entities: ['**/*.entity.ts']})
+    Object.assign(dbConfig, {
+      type: 'sqlite',
+      database: 'test.sqlite',
+      entities: ['**/*.entity.ts']
+    })
     break
   case 'production':
     break
